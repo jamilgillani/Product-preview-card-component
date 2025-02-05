@@ -1,0 +1,139 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Montserrat', sans-serif;
+  background-color: hsl(30, 38%, 92%);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+.product__card {
+  margin: 1rem;
+  border-radius: 1rem;
+  background-color: hsl(0, 0%, 100%);
+  overflow: hidden;
+}
+
+.product__content{
+  padding: 1rem;
+}
+
+
+.product__content * + * {
+  margin-bottom: 1em;
+}
+
+.perfume {
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: hsl(228, 12%, 48%);
+}
+
+.heading {
+  font-family: 'Fraunces', sans-serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.paragraph {
+  font-size: 0.9rem;
+  color: hsl(212, 21%, 14%);
+}
+
+.flex__group {
+  display: flex;
+  gap: 1rem;
+  text-wrap: wrap;
+}
+
+.old-price del {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+
+.price {
+  color: hsl(158, 36%, 37%);
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Fraunces', sans-serif;
+}
+
+.button {
+  width: 100%;
+  border: none;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  background-color: hsl(158, 58%, 20%);
+}
+
+@media screen and (min-width: 44.75rem) {
+  .product__card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 37rem;
+    margin: 2rem auto;
+    align-items: center;
+  }
+}
+
+
+

@@ -1,0 +1,1 @@
+I learn alot of things in this challenges like now i feel confidence while using flexbox, grid and responsive websites. It took me 2 days to complete this challenge as mobile view was very easy for me but whenever i move towards desktop view it make some problems
